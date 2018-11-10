@@ -1,0 +1,16 @@
+<h1>
+    Sign in
+</h1>
+
+<!-- <iframe src="https://api.instagram.com/oauth/authorize/?client_id=2adadf56c61d415e8d34e934123a4af5&redirect_uri=http://localhost:4200/callback&response_type=token"></iframe> -->
+
+<button (click)="socialSignIn('facebook')">Sign in with Facebook</button>
+<button (click)="socialSignIn('google')">Signin in with Google</button>  
+<button (click)="socialSignIn('linkedin')">Signin in with Linkedin</button>  
+<button (click)="signInWithInstagram()">Signin in with Instagram</button>  
+
+<p>
+    <img alt="Sign in with Twitter" (click)="signWithTwitter()" src="https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png">   
+</p>
+
+<button (click)="socialSignOut()">Sign out</button>  
