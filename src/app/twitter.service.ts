@@ -1,5 +1,6 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Http } from "@angular/http";
+import { Observable } from "rxjs/Observable";
 import { environment } from "../environments/environment";
 
 
@@ -9,7 +10,7 @@ const CONSUMER_SECRET = environment.oauthConsumerSecret;
 @Injectable()
 export class TwitterService {
 
-constructor(private _http: Http) { }
+constructor(private _http: HttpClient) { }
 
 static getNonce(numChars): string {
     let st = "0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz";
@@ -54,8 +55,8 @@ static getNonce(numChars): string {
     return Promise.reject(error.message || error);
   }
 
-  postAPIData() {
-    return this._http.post("http://localhost:3000/api/postData", {"firstName" : "Code", "lastName" : "Handbook"});
+  postAPIData(): Observable<any> {
+    return this._http.post("http://localhost:3000/requestTokenTwitter",{});
   }
 
 onSignIn(): Promise<any> {

@@ -7,5 +7,6 @@ export const environment = {
     production: false,
     redirectUri: "http://localhost:4200/",
     oauthConsumerKey: "VRr0E9A4TFcE4MmCHgXcI0mTl",
-    oauthConsumerSecret: "Ety9mafs2RJCF0kmhNcRkgcluJ7CXZ3boVN7ajSaUJTKAM3TVZ"
+    oauthConsumerSecret: "Ety9mafs2RJCF0kmhNcRkgcluJ7CXZ3boVN7ajSaUJTKAM3TVZ",
+    twitterCallback: "http:4200//twitter-callback"
 };

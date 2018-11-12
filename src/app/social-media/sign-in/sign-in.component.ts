@@ -67,6 +67,7 @@ export class SignInComponent {
     public signWithTwitter(): void {
         this._twitterService.postAPIData().subscribe((response) => {
             console.log("response from post data is ", response);
+            window.location.href = "https://api.twitter.com/oauth/authenticate?oauth_token=" + response.oauth_token;
           }, (error) => {
             console.log("error during post is ", error);
           });
